@@ -37,7 +37,7 @@ namespace :pattern do
   desc "Convert eponymy links to common format"
   task :convert do
     data,db = get_params
-    puts `./utils/conver_eponymous.rb -d #{db} -o #{data}/eponymous_from_compound_to_load.csv -i #{data}/eponymous_from_compound.csv`
+    puts `./utils/convert_eponymous.rb -d #{db} -o #{data}/eponymous_from_compound_to_load.csv -i #{data}/eponymous_from_compound.csv`
   end
 
 =begin
