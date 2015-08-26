@@ -28,13 +28,13 @@ namespace :pattern do
     puts `./utils/find_entities_in_category_names.rb -d #{db} -o #{data}/patterns/entities.csv`
   end
 
-=begin
   desc "Find eponymy links between categories and articles"
   task :eponymy do
     data,db = get_params
-    puts `./utils/export_eponymous_categories.rb -d #{db} -o #{data}/patterns/eponymous_categories.csv -i #{data}/patterns/entities.csv`
+    puts `./utils/export_eponymous_categories.rb -d #{db} -o #{data}/eponymous_from_compound.csv -i #{data}/patterns/entities.csv`
   end
 
+=begin
   desc "Discover patterns in entity matches"
   task :group do
     data,db = get_params
