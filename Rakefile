@@ -34,6 +34,12 @@ namespace :pattern do
     puts `./utils/export_eponymous_categories.rb -d #{db} -o #{data}/eponymous_from_compound.csv -i #{data}/patterns/entities.csv`
   end
 
+  desc "Convert eponymy links to common format"
+  task :convert do
+    data,db = get_params
+    puts `./utils/conver_eponymous.rb -d #{db} -o #{data}/eponymous_from_compound_to_load.csv -i #{data}/eponymous_from_compound.csv`
+  end
+
 =begin
   desc "Discover patterns in entity matches"
   task :group do
