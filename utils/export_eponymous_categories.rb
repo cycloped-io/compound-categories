@@ -26,7 +26,7 @@ rescue => ex
   exit
 end
 
-include Rlp::Wiki
+include Cyclopedio::Wiki
 Database.instance.open_database(options[:database])
 at_exit do
   Database.instance.close_database

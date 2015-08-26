@@ -25,8 +25,8 @@ end
 
 include Cyclopedio::Wiki
 
-extractor = Compound::ProperNameExtractor.new
-finder = Compound::ProperNameFinder.new(Article,extractor)
+extractor = Cyclopedio::Compound::ProperNameExtractor.new
+finder = Cyclopedio::Compound::ProperNameFinder.new(Article,extractor)
 
 Database.instance.open_database(options[:database])
 at_exit do
